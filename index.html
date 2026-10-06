@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>TourMatch</title>
+    <meta name="description" content="Describe your trip in plain language. TourMatch searches tour marketplaces and ranks the local guides that fit." />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" href="web/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="web/styles.css" />
+    <!-- Same icon set the native app uses (@expo/vector-icons/Ionicons). -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+  </head>
+  <body>
+    <div id="preview-bar" role="note" hidden>
+      <span>Design preview: sample tours, and nothing you enter leaves this browser.</span>
+      <button type="button" id="preview-dismiss" aria-label="Dismiss"><ion-icon name="close"></ion-icon></button>
+    </div>
+
+    <header class="topnav" id="topnav">
+      <div class="topnav-inner">
+        <a class="logo" href="#/" aria-label="TourMatch home">
+          <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true">
+            <path fill="currentColor" d="M16 2C9.9 2 5 6.9 5 13c0 8.3 9.6 16.1 10.1 16.5a1.4 1.4 0 0 0 1.8 0C17.4 29.1 27 21.3 27 13 27 6.9 22.1 2 16 2Z" />
+            <path fill="#fff" d="m16 7.5 1.5 3.9 3.9 1.6-3.9 1.5L16 18.5l-1.5-4L10.6 13l3.9-1.6Z" />
+          </svg>
+          <span>tourmatch</span>
+        </a>
+        <div id="nav-search" style="flex: 1; display: flex"></div>
+        <nav class="topnav-links" aria-label="Main">
+          <a href="#/" data-tab="explore"><ion-icon name="search"></ion-icon>Explore</a>
+          <a href="#/saved" data-tab="saved"><ion-icon name="heart-outline"></ion-icon>Saved</a>
+          <a href="#/more" data-tab="more"><ion-icon name="menu-outline"></ion-icon>More</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="app" tabindex="-1"></main>
+
+    <nav class="tabbar" aria-label="Tabs">
+      <a href="#/" data-tab="explore"><ion-icon name="search"></ion-icon>Explore</a>
+      <a href="#/saved" data-tab="saved"><ion-icon name="heart-outline"></ion-icon>Saved</a>
+      <a href="#/more" data-tab="more"><ion-icon name="menu-outline"></ion-icon>More</a>
+    </nav>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <noscript><p style="padding: 24px">TourMatch needs JavaScript to run.</p></noscript>
+
+    <script src="web/data.js"></script>
+    <script src="web/terms.js"></script>
+    <script src="web/js/core.js"></script>
+    <script src="web/js/engine.js"></script>
+    <script src="web/js/traveler.js"></script>
+    <script src="web/js/business.js"></script>
+    <script src="web/js/advertiser.js"></script>
+    <script src="web/js/main.js"></script>
+  </body>
+</html>
